@@ -43,7 +43,7 @@ const Blog = () => {
                     {desc.map((index) => (
                         <div className="col-6">
 
-                            <div className="position">
+                            <div data-aos="fade-right" className="position">
                                 <h3 className="skills-h3" >{index.h3}</h3>
                                 <h1 className="skills-h1" > {index.h1} </h1>
                                 <p className="skills-p" > {index.p1} </p>
@@ -58,7 +58,7 @@ const Blog = () => {
                 </div>
 
                 <div className="all-skills">
-                    <Card className="card-blog" style={{ backgroundColor: '#1f2235' }}>
+                    <Card data-aos="fade-left" className="card-blog" style={{ backgroundColor: '#1f2235' }}>
                         <div className="card-1">
                             <FaQuoteRight className="quotes" />
                             <p className="paragraph">{quotes.paragraph}</p><br />

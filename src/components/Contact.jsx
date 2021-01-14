@@ -2,7 +2,7 @@ import React from 'react';
 import { FaMapMarker } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
 
@@ -37,7 +37,8 @@ const Contact = () => {
     return (
         <div className="contact" id="contact">
             <div className="container">
-                <div className="common">
+               <div data-aos="fade-down">
+               <div className="common">
                     <h3 className="heading">{header.mainHeader}</h3>
                     <h1 className="main-header">{header.subHeading}</h1>
                     <p style={{ fontSize: '15px' }} className="main-content">{header.text}  </p>
@@ -47,18 +48,19 @@ const Contact = () => {
                 <div className="row-1">
                     {contact.map((info) => (
                         <div className="col-4">
-                                <div className="services-box" >
-                                    {info.icon}
-                                    <div className="services-box-p">{info.h3}</div>
-                                    <div className="services-box-p">{info.p}</div>
+                            <div className="services-box" >
+                                {info.icon}
+                                <div className="services-box-p">{info.h3}</div>
+                                <div className="services-box-p">{info.p}</div>
                             </div>
                         </div>
                     ))}
                 </div>
+               </div>
 
-                
 
-<form  onSubmit={handleSubmit}>
+
+                <form data-aos="fade-up" onSubmit={handleSubmit}>
                     <div className="form">
                         <input className="input" value={value.name} type="text" placeholder="Your Name" onChange={handleChange} />
                         <input className="input" value={value.email} type="email" placeholder="Your email" onChange={handleChange} />
@@ -71,13 +73,13 @@ const Contact = () => {
                             onChange={handleChange}
                         />
                         <textarea className="input-text"
-                            style={{height: "200px" }}
+                            style={{ height: "200px" }}
                             value={value.message}
                             onChange={handleChange}
                             placeholder="Your Message"
                         />
                         <div className="row">
-                            <Link to="/" className="btn btn-smart" onClick={handleSubmit} style={{marginTop : '40px ' }}>Send Message</Link>
+                            <Link to="/" className="btn btn-smart" onClick={handleSubmit} style={{ marginTop: '40px ' }}>Send Message</Link>
                         </div>
                     </div>
                 </form>

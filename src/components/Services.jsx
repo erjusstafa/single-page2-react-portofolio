@@ -1,20 +1,12 @@
-import React from 'react'
-import {
-    FaCode,
-    FaCamera,
-    FaCodepen,
-    FaApple,
-    FaFileVideo,
-    FaSearchPlus
-} from 'react-icons/fa'
-
+import React  from 'react'
+import { FaCode,FaCamera, FaCodepen, FaApple, FaFileVideo,FaSearchPlus} from 'react-icons/fa'
 
 
 
 
 const Services = () => {
 
-
+   
 
     const [header] = React.useState(
         {
@@ -79,7 +71,7 @@ const Services = () => {
                     <div className="row bgMain">
                         {state.map((info) => (
                             <div className="col-4 bgMain">
-                                <div className="services-box">
+                                <div data-aos="fade-up-down" className="services-box">
                                     {info.icon}
                                     <div className="services-box-header">{info.heading}</div>
                                     <div className="services-box-p">{info.text}</div>

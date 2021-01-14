@@ -1,3 +1,4 @@
+import React, {useEffect} from 'react'
 import './App.css';
 import Home from './components/Home'
 import Nav from './components/Nav'
@@ -11,8 +12,15 @@ import Contact from './components/Contact'
 import Erjus from './components/Erjus';
 import Copyright from './components/Copyright';
 import { BrowserRouter as Router} from "react-router-dom";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+
+  useEffect(() =>  {
+    Aos.init({ duration : 2000}) ;    
+}, []) ;
+
   return (
     <div className="App">
 

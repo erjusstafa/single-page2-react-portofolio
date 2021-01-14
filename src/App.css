@@ -255,6 +255,7 @@ body {
   background: #23263a;
   color: #fff;
   margin: 1rem;
+  overflow: hidden;
 }
 
 .services-box:hover  {

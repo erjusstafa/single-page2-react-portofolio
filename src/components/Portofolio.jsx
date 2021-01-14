@@ -35,16 +35,17 @@ const Portofolio = () => {
 
         <div className="portofolio" id="portofolio">
             <div className="container">
-                <div className="common">
+               <div data-aos="fade-down">
+               <div  className="common">
                     <h3 className="heading">{portofolio.myHeader}</h3>
                     <h1 className="main-header">{portofolio.subHeader}</h1>
                     <p style={{ fontSize: '15px' }} className="main-content">{portofolio.text} </p>
                     <div className="common-border"></div>
                 </div>
+
+
                 <div className="row  h-650 align-center">
-
                     {buton.map((x) => (
-
                         <div className="chooise-button">
                             <ul className="ul-list">
                             <li>
@@ -54,12 +55,13 @@ const Portofolio = () => {
                         </div>
                     ))}
                 </div>
+               </div>
 
                 
                     <div className="row">
                         {images1.map((y) => (
                             
-                                <Card className="img-1" style={{ width: '300px', height: '300px' }}>
+                                <Card data-aos="fade-up" className="img-1" style={{ width: '300px', height: '300px' }}>
                                     <img src={y.src} alt="logo"/>
                                     <div className="caption">
                                         <h1>x</h1>
